@@ -1,0 +1,13 @@
+<div>
+  <h2>DISPLAY NAME</h2>
+  <label for="firstName">First Name:</label>
+  <input id="firstName" type="text" placeholder="Enter first name" [(ngModel)]="firstName">
+  <br>
+  <label for="lastName">Last Name:</label>
+  <input id="lastName" type="text" placeholder="Enter last name" [(ngModel)]="lastName">
+  <br>
+  <button (click)="fullName = displayFullName()">Display
+    Full Name</button>
+  <br>
+  <p>Full Name: {{ fullName }}</p>
+</div>

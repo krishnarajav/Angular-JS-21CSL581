@@ -1,0 +1,16 @@
+<div>
+    <h2>SHOPPING LIST</h2>
+    <ul>
+        <li *ngFor="let item of shoppingItems">{{ item }}</li>
+    </ul>
+</div>
+<div>
+    <label for="newItem">Add item: </label>
+    <input id="newItem" placeholder="Enter a new item" [(ngModel)]="item">
+    <button (click)="addItem()">Add</button>
+</div>
+<div>
+    <label for="removeItem">Remove item: </label>
+    <input id="removeItem" placeholder="Enter item to remove" [(ngModel)]="rItem">
+    <button (click)="removeItem()">Remove</button>
+</div>

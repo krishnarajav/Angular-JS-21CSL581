@@ -1,0 +1,8 @@
+<div>
+    <h2>CALCULATE FACTORIAL AND SQUARE</h2>
+    <label for="numberInput">Enter the number: </label>
+    <input type="number" id="numberInput" [(ngModel)]="num">
+    <button (click)="calculateFactorial(num)">Factorial</button>
+    <button (click)="calculateSquare(num)">Square</button>
+    <p>Result: {{result}}</p>
+</div>

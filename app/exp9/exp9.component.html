@@ -1,0 +1,18 @@
+<div>
+    <h2>Employee List</h2>
+    <div>
+        <label for="nameInput">Search by Name:</label>
+        <input id="nameInput" type="text" [(ngModel)]="searchName" />
+    </div>
+    <div>
+        <label for="salaryInput">Search by Salary (Min):</label>
+        <input id="salaryInput" type="number" [(ngModel)]="searchSalary" />
+    </div>
+    <button (click)="searchEmployees()">Search</button>
+    <h3>Filtered Employees</h3>
+    <ul>
+        <li *ngFor="let employee of filteredEmployees">
+            {{ employee.name }} - Salary: {{ employee.salary | currency: 'INR':'symbol':'1.2-2' }}
+        </li>
+    </ul>
+</div>

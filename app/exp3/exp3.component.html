@@ -1,0 +1,20 @@
+<div>
+  <h2>SIMPLE CALCULATOR</h2>
+  <label for="num1">Number1: </label>
+  <input id="num1" type="number" placeholder="Enter Number 1" [(ngModel)]="num1">
+  <br>
+  <label for="num2">Number2: </label>
+  <input id="num2" type="number"  [(ngModel)]="num2" placeholder="Enter Number 2">
+  <br>
+  <label for="operator">operator: </label>
+  <select id="operator" [(ngModel)]="operator">
+    <option value="+">Plus(+)</option>
+    <option value="-">Minus(-)</option>
+    <option value="/">Division(/)</option>
+    <option value="*">Multiplication(*)</option>
+  </select>
+  <br>
+  <button (click)="calculate()">calculate</button>
+  <br>
+  <p>Result: {{result}}</p>
+</div>

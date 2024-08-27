@@ -1,0 +1,21 @@
+<div>
+    <h2>Login</h2>
+    <div>
+        <label for="usernameInput">Username:</label>
+        <input id="usernameInput" type="text" [(ngModel)]="username" required minlength="5" />
+        <div *ngIf="usernameInputTouched && usernameInputInvalid">
+            <span *ngIf="usernameRequired">Username is required.</span>
+            <span *ngIf="usernameMinlength">Username must be at least 5 characters.</span>
+        </div>
+    </div>
+    <div>
+        <label for="passwordInput">Password:</label>
+        <input id="passwordInput" type="password" [(ngModel)]="password" required minlength="8" />
+        <div *ngIf="passwordInputTouched && passwordInputInvalid">
+            <span *ngIf="passwordRequired">Password is required.</span>
+            <span *ngIf="passwordMinlength">Password must be at least 8 characters.</span>
+        </div>
+    </div>
+    <button (click)="login()" [disabled]="!isValidForm()">Login</button>
+    <div *ngIf="loginSuccessful">Login successful!</div>
+</div>

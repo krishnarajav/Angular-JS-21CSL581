@@ -1,0 +1,17 @@
+<div>
+    <h2>Student Details</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students">
+                <td>{{ student.name | uppercase }}</td>
+                <td>{{ student.grade | uppercase }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

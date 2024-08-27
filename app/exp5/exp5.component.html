@@ -1,0 +1,14 @@
+<div>
+    <h2>STUDENT DETAILS</h2>
+    <p>Total: {{ total }}</p>
+    <label for="limitInput">Display Limit:</label>
+    <input id="limitInput" type="number" placeholder="Enter limit" [(ngModel)]="studentCount">
+    <button (click)="displayStudents()">Display Students</button>
+    <h3>Displayed Students</h3>
+    <ul>
+        <li *ngFor="let student of displayedStudents">
+            {{ student.name }} ({{ student.USN }}) - CGPA: {{ student.CGPA }}
+        </li>
+    </ul>
+    <h3>Student Count: {{ sCount }}</h3>
+</div>
